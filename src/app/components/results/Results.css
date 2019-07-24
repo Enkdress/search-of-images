@@ -8,11 +8,12 @@
 }
 .card{
     padding: 2px;
-    margin: 20px 20px 0 20px;
+    margin: 20px 20px 0 25px;
     width: 20%;
     height: 430px;
     display: inline-table;
-    background-color: #D6B798;;
+    background-color: #D6B798;
+    transition: width 2s, height 2s, transform 2s;
 }
 .card-body{
     padding: 10px;
@@ -28,7 +29,7 @@
     background-color: #D6B798;
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 600px){
     .card{
         width: 100%;
         margin: 30px 0 0 0;
@@ -42,6 +43,7 @@
 
 @media screen and (max-width: 768px) and (min-width: 569px){
     .card{
+        display: inline-table;
         width: 60%;
         padding: 0;
     }
