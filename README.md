@@ -1,2 +1,2 @@
-# -search-of-images
+# seach-of-images
 This is my first useful react app
