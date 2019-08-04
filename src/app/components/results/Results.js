@@ -11,30 +11,31 @@ export default class Result extends Component{
         const appState = this.props.data
 
         return(
-            <React.Fragment>
+            <div>
                 {appState.map(image => {
                     return (
-                        <div className='card col-sm-4' key={image.id}>
+                        <div className='card' key={image.id}>
                             <div className="main-image">
-                                <img className='images card-img-top' src={image.previewURL} alt=''/>
-                            </div>
-                            <div className="card-body">
-                                <div className="tags text-center">
-                                    <p className="card-text">downloads: {image.downloads}</p>
-                                    <p className="card-text">views: {image.views}</p>
-                                    <p className="card-text">likes: {image.likes}</p>
-                                </div>
-                                <div className="card-title text-center">
-                                    <h6 className="card-title">
-                                        <i className='user-image'><img src={image.userImageURL} alt={image.user}/>
+                                <img className='images' src={image.webformatURL} alt= {image.tags}/>
+                                
+                                <div className="bodyCard card-body">
+                                    <div className="card-title text-center">
+                                        <p>
+                                            <img src={image.userImageURL}/>
                                             {image.user}
-                                        </i>
-                                    </h6>
+                                        </p>
+                                    </div>
+                                    <div className="tags text-center">
+                                        <p className="card-text">downloads: {image.downloads}</p>
+                                        <p className="card-text">views: {image.views}</p>
+                                        <p className="card-text">likes: {image.likes}</p>
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div> );
                     })}
-                </React.Fragment>
+            </div>
         )
     }
 }

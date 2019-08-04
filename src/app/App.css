@@ -1,8 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
-    background-color: #26231E;
+    background-color: #ddd;
     color: white;
 }
 .card-container{
-    padding: 50px;
+    padding: 15px;
     width: 100%;
 }

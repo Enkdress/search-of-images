@@ -12,16 +12,18 @@ import './App.css';
 export default class App extends Component{
 
   state = {
-    request: []
+    request: [],
+    noHits: ""
   }
 
   getData = async e => {
     e.preventDefault()
     const REQ = e.target.research.value;
     const KEY = "13055488-7e28d181f3875eee86a83eee3"
-    const URL = `https://pixabay.com/api/?key=${KEY}&q=${REQ}`
+    const URL = `https://pixabay.com/api/?key=${KEY}&q=${REQ}&page=10&per_page=10&image_type=ilustartor&min_width=460px&editors_choice=true`
     console.log(URL)
 
+    
     const RES = await fetch(URL);
 
     //HERE ARE THE ARRAY WITH THE REQUEST 
@@ -44,7 +46,6 @@ export default class App extends Component{
             <div className="card-container">
               <Result data = {this.state.request} />
             </div>
-              <span>by Sergio</span>
           </div>
         </div>
 
