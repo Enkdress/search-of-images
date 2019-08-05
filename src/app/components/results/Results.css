@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@
     display: none;
 }
 .bodyCard .card-title{
-    display: block;
+    display: flex;
     margin: 1px;
     text-align: center;
     width: 100%;
@@ -51,7 +53,7 @@
 }
 
 .card-title img{
-    width: 25px;
+    width: 15px;
     border-radius: 50%;
     display: flex;
     justify-content: flex-end;

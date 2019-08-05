@@ -47,6 +47,7 @@ export default class App extends Component{
               <Result data = {this.state.request} />
             </div>
           </div>
+          <br id = "endPage"/>
         </div>
 
     )

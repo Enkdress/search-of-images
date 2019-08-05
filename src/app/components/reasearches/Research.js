@@ -8,7 +8,7 @@ export default class Reasearch extends Component{
     render(){
 
         return(
-            <div className='research container  p-5'>
+            <div className='research container p-5'>
                 <div className="mx-auto">
                     <h1 className= 'text-center'>
                         Search your images

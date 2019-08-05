@@ -14,7 +14,7 @@ export default class Result extends Component{
             <div>
                 {appState.map(image => {
                     return (
-                        <div className='card' key={image.id}>
+                        <div className='card' key={image.id}> 
                             <div className="main-image">
                                 <img className='images' src={image.webformatURL} alt= {image.tags}/>
                                 
@@ -32,7 +32,7 @@ export default class Result extends Component{
                                     </div>
                                 </div>
                             </div>
-                            
+                            <br id = "endPage"/>
                         </div> );
                     })}
             </div>

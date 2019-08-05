@@ -2,49 +2,67 @@
     background-color: #828E7D;
     color: white;
 }
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
 .card{
     flex-direction: column;
     color: #333;
     margin: 30px 0;
     box-shadow: 0 1px 7px 1px rgba(51,51,51,0.3);
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 .bodyCard{
     display: none;
-    transition: all .5s;
-    transform: translateX(-100%);
+}
+.bodyCard .card-title{
+    display: flex;
+    margin: 1px;
+    text-align: center;
+    width: 100%;
 }
 
 .main-image img{
     width: 100%;
-    padding-bottom: 10px;
     background: rgba(51,51,51,0.2);
 }
 .main-image .images:hover ~ .bodyCard{
     cursor: pointer;
-    display: block;
+    display: inline-block;
+    margin-bottom: 1%;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     text-align: center;
-    background: rgba(51,51,51,0.7);
+    background: rgba(51,51,51,0.6);
     color: #fff;
     width: 100%;
-    height: 100%;
-    z-index: 100;
-    transform: translateX(0);
+    height: 50%;
+    display: flex;
 }
 
 .tags p{
-    padding: 10px;
-    font-size: 18px;
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+    font-size: .8em;
+    flex-direction: row-reverse;
+    margin: 0;
+    width: 100%;
 }
+
+.card-title img{
+    width: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 html{
     scroll-behavior: smooth;
 }
