@@ -10,7 +10,7 @@ const App = () => {
     e.preventDefault()
     const REQ = e.target.research.value;
     const KEY = "13055488-7e28d181f3875eee86a83eee3"
-    const URL = `https://pixabay.com/api/?key=${KEY}&q=${REQ}&page=10&per_page=10&image_type=ilustartor&min_width=460px&editors_choice=true`
+    const URL = `https://pixabay.com/api/?key=${KEY}&q=${REQ}&per_page=10`
 
     const RES = await fetch(URL);
     const data = await RES.json();
