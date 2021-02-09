@@ -1,27 +1,22 @@
-import React, { Component } from 'react';
-
-
+import React from 'react';
 import './Results.css';
 
-export default class Result extends Component{
-
-
-    render(){
-
-        const appState = this.props.data
-
-        return(
+const Result = ({data}) => {
+    if (!data) {
+        return <h1>No data</h1>
+    } else {
+        return (
             <div>
-                {appState.map(image => {
+                {data.map(image => {
                     return (
-                        <div className='card' key={image.id}> 
+                        <div className='card' key={image.id}>
                             <div className="main-image">
-                                <img className='images' src={image.webformatURL} alt= {image.tags}/>
-                                
+                                <img className='images' src={image.webformatURL} alt={image.tags} />
+
                                 <div className="bodyCard card-body">
                                     <div className="card-title text-center">
                                         <p>
-                                            <img src={image.userImageURL}/>
+                                            <img src={image.userImageURL} />
                                             {image.user}
                                         </p>
                                     </div>
@@ -32,10 +27,13 @@ export default class Result extends Component{
                                     </div>
                                 </div>
                             </div>
-                            <br id = "endPage"/>
-                        </div> );
-                    })}
+                            <br id="endPage" />
+                        </div>);
+                })}
             </div>
         )
     }
 }
+
+export default Result;
+
